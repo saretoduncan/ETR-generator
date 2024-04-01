@@ -13,7 +13,7 @@ const Etr: React.FC<EtrProps> = ({ erpInputs }) => {
   const handleTotal = () => {
     let sum: number = 0.0;
     erpInputs?.items.forEach((item) => {
-      sum = parseFloat(item.price) * parseFloat(item.quantity);
+      sum += parseFloat(item.price) * parseFloat(item.quantity);
     });
     return sum;
   };
